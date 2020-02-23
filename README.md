@@ -1,1 +1,1 @@
-https://davinchick.github.io/singolo/
+https://davinchick.github.io/singolo/singolo1.html
