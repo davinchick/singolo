@@ -176,6 +176,7 @@ input:focus:-ms-input-placeholder      {opacity:0;}/* IE */
 	font-weight: 700;
     font-size: 18px;
     color: #ffffff;
+    letter-spacing: 0.004em;
     margin-top: -2px;
 }
 
@@ -190,12 +191,20 @@ input:focus:-ms-input-placeholder      {opacity:0;}/* IE */
     padding-bottom: 24px;
 }
 
+.contactInf_data span{
+    padding-right: 10px;
+}
+
+.local{
+    margin-left: 3px;
+}
+
 .contactInf_data{
 	font-weight: 300;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    line-height: 21px;
+    font-size: 12px; 
+    line-height: 22px;
     color: #ffffff;
+    padding-left: 1px;
 }
 
 footer{
