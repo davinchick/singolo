@@ -251,13 +251,13 @@
                     <div class="getQuote__form_columnFirst ">
                         <form id="data" action="#" method="get" class="message__form" >
                             <fieldset>
-                                <p><input form="data" type="text" class="getQuote_input" placeholder="Name (Required)" inputmode="latin-name" required></p>
+                                <p><input form="data" type="text" class="getQuote_input" placeholder="Name (Required)" inputmode="latin-name" pattern="[A-Z][A-Za-z' -]+" required></p>
                                 <p><input form="data" type="email" class="getQuote_input" placeholder="Email (Required)" required></p>
                                 <p><input form="data" type="text" class="getQuote_input" placeholder="Subject"></p>
                                 <p><textarea form="data" name="textarea" cols="30" rows="10" maxlength="300" class="getQuote_input getQuote_area" placeholder="Describe your project in details..."></textarea>
                                 </p>
+                                <p><input form="data" formaction="url.." type="submit" class="getQuote_input getQuote_submit" value="Send the message"></p>
                             </fieldset>
-                            <p><input form="data" formaction="url.." type="submit" class="getQuote_input getQuote_submit" value="Send the message"></p>
                         </form>
                     </div>
                     <div class="getQuote__form_columnSecond">
@@ -265,8 +265,8 @@
                             <h3>Contact Information</h3>
                             <p class="contactInf_descr">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
                             <p class="contactInf_data"><span class="local"><img src="assets/location.png"></span> Elm St. 14/05 Lost City </p>
-                            <p class="contactInf_data"><span><img src="assets/phoneltl.png"></span> 03528 331 86 35 </p>
-                            <p class="contactInf_data"><span><img src="assets/mail.png"></span> info@singolo.com</p>
+                            <p class="contactInf_data"><span><img src="assets/phoneltl.png"></span> <a href="#" type="tel" alt ="telephone-Number">03528 331 86 35 </a></p>
+                            <p class="contactInf_data"><span><img src="assets/mail.png"></span> <a href="#" type="email" alt ="telephone-Number">info@singolo.com</a></p>
                         </div>
                     </div>
                 </div>
