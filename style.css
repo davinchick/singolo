@@ -582,6 +582,11 @@ header{
     margin-bottom: 16px;
 }
 
+.getQuote_input:invalid:focus, input[type='text']:first-child:invalid:focus{
+    outline: 2px solid red; 
+    outline-style: auto;
+}
+
 .getQuote_area{
     font: 12px 'Lato-Regular', sans-serif;
     color: var(--pearl);
@@ -614,6 +619,7 @@ input:focus:-ms-input-placeholder      {opacity:0;}/* IE */
 }
 
 .getQuote_submit:hover{
+    cursor: pointer;
     font-size: 14px;
     transition: font-size .4s ease 0s;
 }
@@ -643,6 +649,10 @@ input:focus:-ms-input-placeholder      {opacity:0;}/* IE */
 
 .contactInf_data span{
     padding-right: 10px;
+}
+
+.contactInf_data a{
+    color: #ffffff;
 }
 
 .local{
