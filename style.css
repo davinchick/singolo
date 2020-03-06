@@ -219,18 +219,19 @@ header{
     background-color: transparent;
     background-image: url("assets/chev.png");
     cursor: pointer;
+    outline: none;
 }
 
 .btn-slider.right{
     transform: rotate(180deg);
 }
 
-.btn-slider.right:active, .btn-slider.left:active{
+.btn-slider.right:active, .btn-slider.right:hover, .btn-slider.left:active, .btn-slider.left:hover{
     outline: none!important;
     background-image: url("assets/btn.png");
 }
 
-.btn-slider.right:active{
+.btn-slider.right:active, .btn-slider.right:hover{
     transform: rotate(180deg);
 }
 
