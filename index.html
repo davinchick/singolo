@@ -2,29 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Singolo page made by Kumamon">
     <meta name="keywords" content="singolo1, kumamon, best_page_ever">
     <meta name="Autor" content="DaVinci">
     <title>Singolo Final editor</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <div class="wrapper">
-
+    <header>
     <section class="header">
-        <header>
+
             <div class="container">
                 <div class="header__body">
+                    <div class="menu-header__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                     <div class="header__logo">
                         <a href="index.html"><span class="logo">singolo</span></a>
                         <span class="red">*</span>
                     </div>
+
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="index.html" class="menu_link active">Home</a></li>
+                            <li><a href="#header" class="menu_link active">Home</a></li>
                             <li><a href="#services" class="menu_link">services</a></li>
                             <li><a href="#portfolio" class="menu_link">portfolio</a></li>
                             <li><a href="#about" class="menu_link">about</a></li>
@@ -33,26 +40,50 @@
                     </nav>
                 </div>
             </div>
-        </header>
-    </section>
 
-    <section class="slider">
-        <div class="container">
+    </section>
+    </header>
+    <main>
+    <section class="slider" id="header">
+        
+            <div class="slider__btn">
+                <button class="btn-slider left" onclick="minusSlide(0)"> </button>
+            </div>
+            <div class="slider__btn left">
+                <button class="btn-slider right" onclick="plusSlide(1)"> </button>
+            </div>
+
             <div class="slider__cellphone">
-                <div class="slider__btn">
-                    <button class="btn-slider left"> </button>
-                </div>
-                <div class="slider_cellphone1">
-                    <img src="assets/iPhone%20Vertical.png" alt="">
-                </div>
-                <div class="slider_cellphone2">
-                    <img src="assets/iPhone%20Horizontal.png" alt="">
-                </div>
-                <div class="slider__btn">
-                    <button class="btn-slider right"> </button>
+                <div class="container">
+                    <div class="slider_cellphone1">
+                        <div class="bg_left"> 
+                        </div>
+                        <img class="bg_shadow" src="assets/mobile/Shadowl.png" alt="shadow">
+                        <img class="bg_base" src="assets/mobile/basel.png" alt="base">
+                        <img class="bg_camera" src="assets/mobile/caml.png" alt="camera">
+                    </div>
+                    <div class="slider_cellphone2">
+                        <div class="bg_right">
+                        </div>
+                        <img class="bg_shadow_right" src="assets/mobile/Shadow.png" alt="shadow">
+                        <img class="bg_base_right" src="assets/mobile/base.png" alt="base">
+                        <img class="bg_camera_right" src="assets/mobile/cam.png" alt="camera">
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="slider__cellphone"> 
+                <div class="slide__second">
+                    <div class="slide__second__phone">
+                        <div class="slide__second__phone__layer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider__cellphone">
+                <div class="slide__third"></div>
+            </div>
+
     </section>
 
     <section class="services" id="services">
@@ -65,13 +96,30 @@
                 </div>
             </div>
             <div class="services__items">
-                <div class="services__item_column">
                     <div class="services__item_block">
                         <div class="item_icon"><img src="assets/pen.png" alt=""></div>
                         <div class="item_descr">
                             <h1>Custom Design</h1>
                             <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra
                                 lacus ut, ultrices velit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__item_block">
+                        <div class="item_icon"><img src="assets/lightbulb.png" alt=""></div>
+                        <div class="item_descr">
+                            <h1>Inovative Ideas</h1>
+                            <p >Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum
+                                tellus dolor id lorem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__item_block">
+                        <div class="item_icon"><img src="assets/heart.png" alt=""></div>
+                        <div class="item_descr">
+                            <h1>Love Is The Answer</h1>
+                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                                Quisque condimentum.
                             </p>
                         </div>
                     </div>
@@ -85,34 +133,12 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="services__item_column center">
-                    <div class="services__item_block">
-                        <div class="item_icon"><img src="assets/lightbulb.png" alt=""></div>
-                        <div class="item_descr">
-                            <h1>Inovative Ideas</h1>
-                            <p >Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum
-                                tellus dolor id lorem.
-                            </p>
-                        </div>
-                    </div>
                     <div class="services__item_block">
                         <div class="item_icon"><img src="assets/bubble.png" alt=""></div>
                         <div class="item_descr">
                             <h1>24 / 7 Support</h1>
                             <p >Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
                                 Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="services__item_column last">
-                    <div class="services__item_block">
-                        <div class="item_icon"><img src="assets/heart.png" alt=""></div>
-                        <div class="item_descr">
-                            <h1>Love Is The Answer</h1>
-                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
-                                Quisque condimentum.
                             </p>
                         </div>
                     </div>
@@ -125,7 +151,6 @@
                             </p>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -138,47 +163,25 @@
                 </div>
                 <div class="portfolio__buttons">
                     <ul class="tabs__caption">
-                        <li class="portfolio_btn active">All</li>
+                        <li class="portfolio_btn active_tab">All</li>
                         <li class="portfolio_btn" >Web Design</li>
                         <li class="portfolio_btn">Graphic Design</li>
                         <li class="portfolio_btn">Artwork</li>
                     </ul>
                 </div>
-                <div class="gallery tabs__content active">
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-11.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-8.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-5.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-2.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-10.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-7.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-4.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-1.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-9.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-6.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-3.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image.png" alt=""></a></div>
-                </div>
                 <div class="gallery tabs__content">
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-11.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-8.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-5.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-2.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-10.png" alt=""></a></div>
-                </div>
-                <div class="gallery tabs__content">
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-10.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-7.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-4.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-1.png" alt=""></a></div>
-                </div>
-                <div class="gallery tabs__content">
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-2.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-10.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-7.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-4.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-1.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-9.png" alt=""></a></div>
-                    <div class="gallery__item"><a href="#"><img src="assets/gallery/Image-6.png" alt=""></a></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-2.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-8.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-1.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-11.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-10.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-7.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-4.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-3.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-9.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-6.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image-5.png" alt=""></div>
+                    <div class="gallery__item"><img src="assets/gallery/Image.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -251,12 +254,11 @@
                     <div class="getQuote__form_columnFirst ">
                         <form id="data" action="#" method="get" class="message__form" >
                             <fieldset>
-                                <p><input form="data" type="text" class="getQuote_input" placeholder="Name (Required)" inputmode="latin-name" pattern="[A-Z][A-Za-z' -]+" required></p>
-                                <p><input form="data" type="email" class="getQuote_input" placeholder="Email (Required)" required></p>
-                                <p><input form="data" type="text" class="getQuote_input" placeholder="Subject"></p>
-                                <p><textarea form="data" name="textarea" cols="30" rows="10" maxlength="300" class="getQuote_input getQuote_area" placeholder="Describe your project in details..."></textarea>
-                                </p>
-                                <p><input form="data" formaction="url.." type="submit" class="getQuote_input getQuote_submit" value="Send the message"></p>
+                                 <input form="data" type="text" class="getQuote_input name" placeholder="Name (Required)" required>
+                                 <input form="data" type="email" class="getQuote_input email" placeholder="Email (Required)" required>
+                                 <input form="data" type="text" class="getQuote_input subject" placeholder="Subject">
+                                 <textarea form="data" name="textarea" cols="30" rows="10" maxlength="800" class="getQuote_input getQuote_area form__textarea" placeholder="Describe your project in details..."></textarea>
+                                 <input form="data" formaction="" type="submit" id="submitBtn" class="getQuote_input getQuote_submit" value="Send the message">
                             </fieldset>
                         </form>
                     </div>
@@ -265,21 +267,21 @@
                             <h3>Contact Information</h3>
                             <p class="contactInf_descr">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
                             <p class="contactInf_data"><span class="local"><img src="assets/location.png"></span> Elm St. 14/05 Lost City </p>
-                            <p class="contactInf_data"><span><img src="assets/phoneltl.png"></span> <a href="#" type="tel" alt ="telephone-Number">03528 331 86 35 </a></p>
-                            <p class="contactInf_data"><span><img src="assets/mail.png"></span> <a href="#" type="email" alt ="telephone-Number">info@singolo.com</a></p>
+                            <p class="contactInf_data"><span><img src="assets/phoneltl.png"></span> <a href="tel:03528 331 86 35"  title ="telephone-Number">03528 331 86 35 </a></p>
+                            <p class="contactInf_data"><span><img src="assets/mail.png"></span> <a href="mailto:info@singolo.com" title ="email">info@singolo.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
-</div>
 
 <footer>
     <div class="container">
         <div class="footer__inf">
-            <div class="footer__inf_column">
+            <div class="footer__copyright">
                 <p> © Copyright 2020</p>
             </div>
             <div class="footer__inf_column">
@@ -294,16 +296,19 @@
     </div>
 </footer>
 
-<script>
-    $(document).ready(function(){
-        $('ul.tabs__caption').on('click', 'li:not(.active)', function(e) {
-            e.preventDefault();
-            $(this)
-                .addClass('active').siblings().removeClass('active')
-                .closest('section.portfolio').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-        });
-    });
-</script>
+</div>
+
+<div class="modalWindow disabled"> 
+    <div class="modalWindow__content">
+        <h2>Thank you, <span class="feedback_name"></span> for your FeedBack!</h2>
+        <div class="modalWindow__frame">
+            <p>Сообщение отправлено!</p>
+            <p class="subject__text"></p>
+            <p class="descr__text"></p>
+        </div> 
+        <button class="closeBtn">OK</button>
+    </div>
+</div>
 
 </body>
 </html>
