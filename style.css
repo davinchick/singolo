@@ -355,7 +355,7 @@ header{
     position: absolute;
     background-image: url("assets/mobile/Layer 6.png");
     background-position: 3.4% 54.5%;
-    z-index: 5;
+    z-index: 6;
     overflow: hidden;
     top: 63px;
     left: 9px;
@@ -370,7 +370,7 @@ header{
     width: 100%;
     height: 95%;
     margin-left: -10px;
-    z-index: 5;
+    z-index: 6;
 }
   
 img.bg_shadow{
@@ -397,7 +397,22 @@ img.bg_camera{
     z-index: 3;
 }
   
-  
+.phone__left{
+    position: absolute;
+    width: 215px;
+    height: 455px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.phone__right{
+    position: absolute;
+    width: 466px;
+    height: 215px;
+    z-index: 5;
+    cursor: pointer;
+}
+
 .slider_cellphone2{
     display: inline-block;
     width: 490px;
@@ -412,7 +427,7 @@ img.bg_camera{
     overflow: hidden;
     background-image: url("assets/mobile/Layer 5.jpg");
     background-position: 50.4% 30.3%;
-    z-index: 5;
+    z-index: 6;
     top: 13px;
     left: 70px;
     width: 334px;
@@ -431,7 +446,7 @@ img.bg_camera{
     width: 100%;
     height: 95%;
     margin-left: -10px;
-    z-index: 5;
+    z-index: 6;
 }
   
 img.bg_shadow_right{
@@ -477,12 +492,22 @@ img.bg_camera_right{
     background-repeat: no-repeat;
 }
 
+.slide__second__phone__block{
+    position: absolute;
+    left: 170px;
+    top: 14px;
+    width: 229px;
+    height: 487px;
+    z-index: 5;
+    cursor: pointer;
+}
+
 .slide__second__phone__layer{
     position: absolute;
     width: 202px;
     height: 356px;
-    left: 48.5%;
-    top: 48.4%;
+    left: 50%;
+    top: 50.5%;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
