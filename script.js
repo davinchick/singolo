@@ -195,13 +195,16 @@ document.addEventListener("DOMContentLoaded", () =>{
             //   ------------- Burger Menu
             const burger = document.querySelector(".menu-header__icon");
             const headerMenu = document.querySelector(".header__menu");
+            const bg = document.getElementById('overlay__bg');
             burger.addEventListener("click", function () {
                 headerMenu.classList.toggle("active");
                 burger.classList.toggle("active");
                 if(headerMenu.classList.contains('active')){
                     document.body.style.overflow = "hidden"; 
+                    bg.style.visibility = 'visible';
                 } else {
                     document.body.style.overflow = "";
+                    bg.style.visibility = '';
                 }
             });
          
