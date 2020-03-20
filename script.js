@@ -31,7 +31,39 @@ document.addEventListener("DOMContentLoaded", () =>{
                     scroll(targetId);
                   }  
      });
-         
+  //----------------scroll effect, based on the window.scrollY and a section's size    
+    const sectionHeader = document.getElementById('header');
+    const sectionServices = document.getElementById('services');
+    const sectionPortfolio = document.getElementById('portfolio');
+    const sectionAbout = document.getElementById('about');
+    const sectionContact = document.getElementById('contact');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY < (sectionServices.offsetTop-sectionHeader.offsetHeight)) {
+            removeCl();
+            links[0].classList.add('active');
+        }
+        if (window.scrollY >= (sectionServices.offsetTop-sectionHeader.offsetHeight)
+                              && window.scrollY < (sectionPortfolio.offsetTop-sectionHeader.offsetHeight)) {
+            removeCl();
+            links[1].classList.add('active');
+        }
+        if (window.scrollY >= (sectionPortfolio.offsetTop-sectionHeader.offsetHeight)) {
+            removeCl();
+            links[2].classList.add('active');
+        }
+        if (window.scrollY >= (sectionAbout.offsetTop-sectionHeader.offsetHeight)) {
+            removeCl();
+            links[3].classList.add('active');
+        }
+        if (window.scrollY >= (sectionContact.offsetTop-sectionHeader.offsetHeight)) {
+            removeCl();
+            links[4].classList.add('active');
+        }
+        if (window.scrollY+1 >= (document.documentElement.scrollHeight-document.documentElement.clientHeight)) {
+            removeCl();
+            links[4].classList.add('active');
+        }
+    });   
          
          // ----------------------- Slider section
               
@@ -54,16 +86,22 @@ document.addEventListener("DOMContentLoaded", () =>{
                   bg3.classList.toggle("lol");
                });
          
-         
+               const sliderCellphone = [...document.querySelectorAll('.slider__cellphone')];
                var slideIndex = 1; 
                goToSlide(slideIndex);
                const buttonNext = document.querySelector(".btn-slider.right"); 
                buttonNext.onclick = function plusSlide() {
                   goToSlide(slideIndex += 1);
+                  sliderCellphone.forEach(el => {
+                     el.style.animationName = 'right'
+                  });
                };
                const buttonPrev = document.querySelector(".btn-slider.left"); 
                buttonPrev.onclick = function minusSlide() {
                   goToSlide(slideIndex -= 1);
+                  sliderCellphone.forEach(el => {
+                    el.style.animationName = 'left'
+                  });
                };
                function goToSlide(n) { 
                   var i;
