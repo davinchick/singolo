@@ -293,19 +293,19 @@ header{
     height: 600px;
     justify-content: center;
     align-items: center;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1s;
-    animation-name: fade;
-    animation-duration: 1s;
+    -webkit-animation-name: left;
+    -webkit-animation-duration: 0.7s;
+    animation-name: left;
+    animation-duration: 0.7s;
 }
 
-@-webkit-keyframes fade {
-    from { opacity: .4}
-    to {  opacity: 1}
+@keyframes left {
+    from {left: 100%;}
+    to {left: 0;}
 }
-@keyframes fade { 
-    from { opacity: .4}
-    to { opacity: 1}
+@keyframes right {
+    from {right: 100%;}
+    to { right: 0;}
 }
 
 .slider__btn{
@@ -828,7 +828,16 @@ img.bg_camera_right{
         height: 170px;
     }
 }
-
+@media (max-width: 375px) {
+    .slide__second__phone__block{
+        width: 100px;
+        height: 200px;
+    }
+    .slide__second__phone__layer{
+        width: 86px;
+        height: 151px;
+    }
+}
 
 
 /*----------Section Services-------------------------*/
