@@ -245,13 +245,13 @@ header{
     .header__menu {
         position: fixed;
         width: 270px;
-        height: 800px;
+        height: 100vh;
         top: 0;
         left: -110%;
         background-color: #2D303A;
         z-index: 20;
         padding: 80px 10px 20px 10px;
-        overflow: auto;
+        overflow: hidden;
         transition: all 0.3s ease 0s;
     }
 
@@ -609,7 +609,7 @@ img.bg_camera_right{
     }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
     .slider, .slider__cellphone {
         height: 460px;
     }
@@ -678,13 +678,16 @@ img.bg_camera_right{
         height: 390px;
     }
     .btn-slider.right, .btn-slider.left {
-        margin-top: 162px;
+        margin-top: 180px;
+    }
+    .btn-slider.left {
+        margin-left: -20px;
     }
     .slider_cellphone1 {
         height: 260px;
         width: 120px;
         margin-bottom: 0;
-        margin-top: -40px;
+        margin-top: 0;
     }
     .slider_cellphone1 .bg_left{
         left: 8px;
@@ -736,19 +739,32 @@ img.bg_camera_right{
         height: 243px;
     }
 }
-
+@media (max-width: 570px) {
+    .slide__second__phone__block{
+        width: 142px;
+        height: 300px;
+    }
+    .slide__second__phone__layer{
+        width: 131px;
+        height: 232px;
+    }
+}
 @media (max-width: 545px) {
     .slider, .slider__cellphone {
         height: 300px;
     }
     .btn-slider.right, .btn-slider.left {
         margin-top: 142px;
-        margin-left: -18px;
+        margin-left: -5px;
+    }
+    .btn-slider.left {
+        margin-left: -24px;
     }
     .slider_cellphone1 {
         height: 200px;
         width: 90px;
         margin-bottom: 20px;
+        margin-left: 20px;
     }
     .slider_cellphone1 .bg_left{
         left: 5px;
@@ -801,23 +817,22 @@ img.bg_camera_right{
         height: 187px;
     }
 }
-@media (max-width: 420px) {
+@media (max-width: 440px) {
+    .slide__second__phone__block{
+        width: 110px;
+        height: 236px;
+    }
+    .slide__second__phone__layer{
+        width: 102px;
+        height: 177px;
+    }
+}
+@media (max-width: 425px) {
     .slider, .slider__cellphone {
         height: 300px;
     }
-    .slider_cellphone2{
-        margin-left: 5px;
-    }
-    .btn-slider.right, .btn-slider.left {
-        width: 10px;
-        height: 20px;
-        background-size: cover;
-    }
     .btn-slider.left {
         margin-left: -30px;
-    }
-    .btn-slider.right{
-        margin-left: 0;
     }
     .slide__second__phone__block{
         width: 110px;
@@ -828,7 +843,112 @@ img.bg_camera_right{
         height: 170px;
     }
 }
+@media (max-width: 405px) {  
+    .slider_cellphone1 {
+        height: 170px;
+        width: 80px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    .slider_cellphone1 .bg_left{
+        left: 4px;
+        width: 72px;
+        height: 117px; 
+    }
+    img.bg_shadow{
+        height: 175px; 
+    }
+    img.bg_camera{
+        left: 16px; 
+        height: 155px;
+    }
+    .phone__left{
+        width: 80px;
+        height: 170px;
+    }
+
+    .slider_cellphone2{
+        width: 170px;
+        height: 80px;
+        margin-bottom: 62px;
+        margin-left: 5px;
+    }
+    .slider_cellphone2 .bg_right {
+        top: 4px; 
+        width: 117px;
+        height: 72px;
+    }
+    img.bg_shadow_right{
+        width: 176px;
+    }
+    img.bg_camera_right{
+        top: 33px;
+        width: 158px;
+    }
+    .phone__right{
+        width: 170px;
+        height: 80px;
+    }
+}
+@media (max-width: 394px) {
+    .slide__second__phone__block{
+        width: 98px;
+        height: 205px;
+    }
+    .slide__second__phone__layer{
+        width: 90px;
+        height: 159px;
+    }
+}
 @media (max-width: 375px) {
+    .slider_cellphone.container{
+        padding: 0 10px;
+    }
+    .slider_cellphone1 {
+        height: 150px;
+        width: 65px;
+        margin-left: 10px;
+    }
+    .slider_cellphone1 .bg_left{
+        width: 56px;
+        height: 96px; 
+    }
+    img.bg_shadow{
+        height: 146px;
+        left: -12px; 
+    }
+    img.bg_camera{
+        left: 10px;
+        height: 130px;
+    }
+    .phone__left{
+        width: 65px;
+        height: 150px;
+    }
+
+    .slider_cellphone2{
+        width: 150px;
+        height: 65px;
+        margin-bottom: 62px;
+        margin-left: 0;
+    }
+    .slider_cellphone2 .bg_right {
+        width: 98px;
+        height: 56px;
+    }
+    img.bg_shadow_right{
+        width: 146px;
+        left: 4px;
+    }
+    img.bg_camera_right{
+        top: 26px;
+        width: 130px;
+        left: 5px;
+    }
+    .phone__right{
+        width: 140px;
+        height: 65px;
+    }
     .slide__second__phone__block{
         width: 100px;
         height: 200px;
@@ -838,7 +958,26 @@ img.bg_camera_right{
         height: 151px;
     }
 }
-
+@media (max-width: 350px) {
+    .slide__second__phone__block{
+        width: 90px;
+        height: 186px;
+    }
+    .slide__second__phone__layer{
+        width: 80px;
+        height: 142px;
+    }
+}
+@media (max-width: 325px) {
+    .slide__second__phone__block{
+        width: 84px;
+        height: 174px;
+    }
+    .slide__second__phone__layer{
+        width: 76px;
+        height: 132px;
+    }
+}
 
 /*----------Section Services-------------------------*/
 .services{
@@ -897,6 +1036,11 @@ img.bg_camera_right{
     padding-right: 12px;
 }
 
+@media (max-width: 990px){
+    .services__items{
+        margin-bottom: 30px;
+    }
+}
 @media (max-width: 699px) {
     .services__item_block {
         max-width: 500px;
@@ -905,9 +1049,17 @@ img.bg_camera_right{
         font-size: 14px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 405px) {
     .services__item_block {
         margin-bottom: 10px;
+    }
+    .services__item_block:nth-child(3) {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 355px) {
+    .services__item_block {
+        margin-bottom: 15px;
     }
 }
 
@@ -1105,6 +1257,7 @@ img.bg_camera_right{
 @media (max-width: 552px) {
     .personal {
         flex-wrap: wrap;
+        margin-bottom: 40px;
     }
     .personal_photo {
         height: 300px;
@@ -1323,6 +1476,15 @@ footer{
 
 .disabled {
     display: none;
+}
+
+@media (max-width: 552px) {
+    .footer__copyright{
+        display: none;
+    }
+    .footer__inf { 
+        justify-content: center;
+    }
 }
 
 .modalWindow {
