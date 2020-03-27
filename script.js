@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                      const galleryDiv = gallery.querySelectorAll('div');
                      const el = event.target;
                      if (el.tagName === 'LI') {
+                        if (el.classList.contains('active_tab')) {return;}
                          tabsUl.querySelectorAll('.portfolio_btn').forEach(el => {
                              el.classList.remove('active_tab');
                          });
